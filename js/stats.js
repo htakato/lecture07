@@ -2,6 +2,7 @@ var DATA_SIZE = 8;
 
 var inputElements = [];
 var outputMean = null;
+var outputMax = null;
 
 
 /**
@@ -39,8 +40,16 @@ var calcMean = function(){
     if(n > 0){
         outputMean.textContent = sum / n;
     }
+
+    if(n = 8){
+        window.alert("hoge");
+    }
 };
 
+var calcMax = function(){
+    var input = inputElements[index];
+    outputMax.textContent = Math.max(input);
+}
 var calcStats = function(){
     calcMean();
 };
