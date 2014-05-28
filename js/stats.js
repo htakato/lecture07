@@ -34,30 +34,43 @@ var calcMean = function(){
             sum = sum + number;
             n = n + 1;
         }
+        else{
+            window.alert("文字入力しとるよ");
+        }
         index = index + 1;
     }
 
     if(n > 0){
         outputMean.textContent = sum / n;
     }
-
-    if(n = 8){
-        window.alert("hoge");
-    }
 };
 
 var calcMax = function(){
-    var input = inputElements[index];
-    outputMax.textContent = Math.max(input);
-}
+    var index = 0;
+    var n = 0;
+
+    while(index < inputElements.length){
+        var input = inputElements[index];
+        var number = Number(input.value);
+        if(!Number.isNaN(number)){
+            n = n + 1;
+        }
+        index = index + 1;
+    }
+    if(n > 0)
+        outputMax.textContent = Math.max(input);
+};
+
 var calcStats = function(){
     calcMean();
+    calcMax();
 };
 
 var initApp = function(){
     initInputElements();
 
     outputMean = document.querySelector("#mean");
+    outputMax = document.querySelector("#max");
 
     var calcMeanButton = document.querySelector("#start");
     calcMeanButton.addEventListener("click", calcStats);
