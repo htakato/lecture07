@@ -9,6 +9,7 @@ var photoList = [
     {src:	"img/side.png", title: "横"},
     {src: "img/enoshima1.jpg", title: "江ノ島"},
     {src: "img/yottekoya.jpg", title: "よってこや"}
+    //リストに新たに追加した画像を追加。showPhotosとrenderPhotoの設定上リストに新たなArrayを追加するだけで可能。理論上永遠に。
 ];
 
 var isReady = function(){
