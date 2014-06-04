@@ -3,7 +3,15 @@ var DATA_SIZE = 8;
 var inputElements = [];
 var outputMean = null;
 var outputMax = null;
-
+var input1 = document.querySelector("#number_1");
+var input2 = document.querySelector("#number_2");
+var input3 = document.querySelector("#number_3");
+var input4 = document.querySelector("#number_4");
+var input5 = document.querySelector("#number_5");
+var input6 = document.querySelector("#number_6");
+var input7 = document.querySelector("#number_7");
+var input8 = document.querySelector("#number_8");
+;
 
 /**
  * initInputElements: データ入力用のテキスト入力集めた配列を作成
@@ -46,20 +54,9 @@ var calcMean = function(){
 };
 
 var calcMax = function(){
-    var index = 0;
-    var n = 0;
-
-    while(index < inputElements.length){
-        var input = inputElements[index];
-        var number = Number(input.value);
-        if(!Number.isNaN(number)){
-            n = n + 1;
-        }
-        index = index + 1;
-    }
-    if(n > 0)
-        outputMax.textContent = Math.max(input);
+   outputMax.textContent = Math.max.apply(Math, [input1.value, input2.value, input3.value, input4.value, input5.value, input6.value, input7.value, input8.value]);
 };
+
 
 var calcStats = function(){
     calcMean();
